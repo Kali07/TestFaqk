@@ -1,0 +1,114 @@
+html{
+  font-size:62.5%
+}
+body{
+  margin:0;
+  font-size: 1.4rem;
+}
+
+h1{
+  text-align: justify;
+  padding: 35px 0;
+}
+
+
+.container{
+  width:960px;
+  margin:0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.questions{
+  width: 100%;
+  height: auto;
+ 
+}
+
+.visible{
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
+  border-radius: 10px;
+  z-index : 100;
+  font-size: 18px;
+}
+
+.visible-pannel{
+  display: flex;
+  justify-content: space-between;
+  align-items : center;
+  border-radius: 10px;
+  position: relative;
+  z-index : 100;
+}
+
+.visible-pannel h2{
+  padding: 15px 5px;
+  font-size : 25px;
+}
+
+.visible-pannel img{
+  margin-right: 10px;
+  width: 25px;
+  cursor: pointer;
+}
+
+
+.toggle-pannel{
+  padding:0px 15px ;
+  height: 0px;
+  opacity: 0;
+}
+
+.toggle-pannel h4{
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.toggle-pannel p {
+  line-height: 1.5;
+}
+
+
+
+
+li{
+  list-style:none;
+}
+
+h2{
+  font-size:2rem;
+  cursor:pointer;
+  position:relative;
+}
+
+article .response{
+  background:#ECECEC;
+  padding:20px;
+  display:none;
+}
+
+article.current .response{
+  display:block;
+}
+
+article h2::after{
+  position:absolute;
+  display:block;
+  top:20px;
+  right:0;
+  content:"";
+  width:27px;
+  height:15px;
+  background: url('../images/arrow.png');
+  transition: all linear 0.25s;
+}
+
+article.current h2::after{
+  transform: rotate(90DEG);
+}
